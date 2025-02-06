@@ -1,0 +1,35 @@
+/* Styles for student list component */ 
+.search-box {
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.table th, 
+.table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.btn-sm {
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.container {
+    text-align: center;
+}
+
+.btn-success {
+    margin-top: 20px;
+} 

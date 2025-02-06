@@ -1,0 +1,42 @@
+<div class="container mt-4">
+  <h2>{{isEditMode ? 'Edit Student' : 'Add New Student'}}</h2>
+
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" formControlName="name">
+      <div class="text-danger" *ngIf="studentForm.get('name')?.invalid && studentForm.get('name')?.touched">
+        Name is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Age</label>
+      <input type="text" class="form-control" formControlName="age">
+      <div class="text-danger" *ngIf="studentForm.get('age')?.invalid && studentForm.get('age')?.touched">
+        Age is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Class</label>
+      <input type="text" class="form-control" formControlName="class">
+      <div class="text-danger" *ngIf="studentForm.get('class')?.invalid && studentForm.get('class')?.touched">
+        Class is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Phone Number</label>
+      <input type="text" class="form-control" formControlName="phoneNumber">
+      <div class="text-danger" *ngIf="studentForm.get('phoneNumber')?.invalid && studentForm.get('phoneNumber')?.touched">
+        Please enter a valid 10-digit phone number
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="studentForm.invalid">
+      {{isEditMode ? 'Update' : 'Add'}} Student
+    </button>
+    <button type="button" class="btn btn-secondary ms-2" routerLink="/">Cancel</button>
+  </form>
+</div> 
